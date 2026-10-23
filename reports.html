@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Site Reports | ALMA</title>
+  <meta name="description" content="Daily journal and weekly site reports.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional font CDN (Google Fonts). Remove these 3 lines to use system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="reports" data-tab="calendar" data-nav="staff" data-protected="true">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" class="page container" tabindex="-1">
+
+    <header class="page-head no-print">
+      <div>
+        <h1>Site Reports</h1>
+        <p>Daily journal and weekly summaries, per site.</p>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" id="new-entry"><span data-icon="plus"></span>New journal entry</button>
+    </header>
+
+    <div class="toolbar no-print">
+      <div class="segmented" role="tablist" aria-label="Report type">
+        <button type="button" role="tab" id="tab-daily" aria-controls="daily-panel" aria-selected="true">Daily</button>
+        <button type="button" role="tab" id="tab-weekly" aria-controls="weekly-panel" aria-selected="false" tabindex="-1">Weekly</button>
+      </div>
+      <div class="toolbar-row">
+        <div class="field"><label for="site-select">Site</label><select id="site-select"></select></div>
+        <div class="field" id="date-wrap"><label for="date-input">Date</label><input id="date-input" type="date"></div>
+        <div class="field" id="week-wrap" hidden><label for="week-select">Week (Sat to Fri)</label><select id="week-select"></select></div>
+      </div>
+      <div id="recent-days" aria-label="Days with entries"></div>
+      <div class="report-actions">
+        <button type="button" class="btn btn-ghost btn-sm" id="export-csv"><span data-icon="download"></span>Export CSV</button>
+        <button type="button" class="btn btn-ghost btn-sm" id="print-report"><span data-icon="printer"></span>Print / Save as PDF</button>
+      </div>
+    </div>
+
+    <div class="print-only" id="print-title"></div>
+    <section id="daily-panel" role="tabpanel" aria-labelledby="tab-daily"></section>
+    <section id="weekly-panel" role="tabpanel" aria-labelledby="tab-weekly" hidden></section>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="app-bottom-nav"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/reports.js"></script>
+</body>
+</html>

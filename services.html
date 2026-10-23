@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Services | ALMA</title>
+  <meta name="description" content="Design, execution, inspection and site services from ALMA.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional font CDN (Google Fonts). Remove these 3 lines to use system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="services" data-tab="add" data-nav="public">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" class="page container" tabindex="-1">
+
+    <header class="page-head">
+      <div>
+        <h1>Services</h1>
+        <p>From design to handover. Pick a service to request a quote or book a site visit.</p>
+      </div>
+    </header>
+
+    <div id="service-groups"></div>
+
+    <section class="card estimator" id="estimator" aria-labelledby="est-title">
+      <div class="estimator-head">
+        <h2 id="est-title">Smart cost estimator</h2>
+        <p class="muted small">A rough budget range only. Placeholder rates: your final quotation follows a site visit.</p>
+      </div>
+      <div class="form-grid">
+        <div class="field"><label for="est-area">Area (m²)</label><input id="est-area" type="number" min="1" value="120" inputmode="numeric"></div>
+        <div class="field"><label for="est-level">Finishing level</label><select id="est-level"></select></div>
+        <div class="field field-wide"><label for="est-scope">Scope</label><select id="est-scope"></select></div>
+      </div>
+      <div class="estimate-out" aria-live="polite">
+        <span class="muted small">Estimated range</span>
+        <strong id="est-result">EGP 0</strong>
+        <button type="button" class="btn btn-primary btn-sm" id="est-quote" style="margin-top:10px">Request a Quote with this estimate</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="app-bottom-nav"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/services.js"></script>
+</body>
+</html>

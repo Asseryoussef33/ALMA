@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Office Directory | ALMA</title>
+  <meta name="description" content="Directory of finishing and interior execution offices.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional font CDN (Google Fonts). Remove these 3 lines to use system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="offices" data-tab="explore" data-nav="public">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" class="page container" tabindex="-1">
+
+    <header class="page-head">
+      <div>
+        <h1>Office Directory</h1>
+        <p>Finishing and interior execution offices. Listings show the details each office provided.</p>
+      </div>
+      <a class="btn btn-outline btn-sm" href="#listing-form-wrap">Request to be listed</a>
+    </header>
+
+    <div class="toolbar">
+      <form class="search-bar" role="search" onsubmit="return false">
+        <label for="office-search" class="sr-only">Search offices by name, area, specialty or service</label>
+        <span data-icon="search"></span>
+        <input id="office-search" type="search" placeholder="Search offices, areas, specialties..." autocomplete="off">
+      </form>
+      <div class="toolbar-row">
+        <div class="field"><label for="office-city">City</label><select id="office-city"></select></div>
+        <div class="field"><label for="office-specialty">Specialty</label><select id="office-specialty"></select></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="office-results">
+      <h2 id="office-results" class="sr-only">Offices</h2>
+      <p class="results-count" id="office-count" aria-live="polite"></p>
+      <div id="office-list" class="dir-grid" style="margin-top:12px"></div>
+      <p class="muted small" style="margin-top:14px">Listings are provided for information only. ALMA does not rank, review or endorse listed offices.</p>
+    </section>
+
+    <section class="card card-pad" id="listing-form-wrap" aria-labelledby="listing-title" style="scroll-margin-top:84px">
+      <h2 id="listing-title" style="font-size:21px">Request to be listed</h2>
+      <p class="muted" style="margin:4px 0 16px">Run a finishing or interior execution office? Send your details and we will review them before publishing.</p>
+      <form id="listing-form" class="form-grid" novalidate>
+        <div class="field"><label for="l-name">Office name</label><input id="l-name" name="officeName" required autocomplete="organization"></div>
+        <div class="field"><label for="l-person">Contact person</label><input id="l-person" name="contactPerson" required autocomplete="name"></div>
+        <div class="field"><label for="l-phone">Phone</label><input id="l-phone" name="phone" type="tel" required autocomplete="tel" pattern="\+?[0-9 ]{7,}"></div>
+        <div class="field"><label for="l-email">Email</label><input id="l-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="l-location">Area and city</label><input id="l-location" name="location" required placeholder="e.g. Smouha, Alexandria"></div>
+        <div class="field"><label for="l-website">Website (optional)</label><input id="l-website" name="website" type="url" placeholder="https://"></div>
+        <fieldset class="field field-wide">
+          <legend>Specialties</legend>
+          <div class="check-grid" id="l-specialties"></div>
+        </fieldset>
+        <div class="field field-wide"><label for="l-services">Services offered</label><textarea id="l-services" name="services" rows="3" required placeholder="e.g. Full execution, gypsum ceilings, painting"></textarea></div>
+        <label class="check-line field-wide"><input type="checkbox" name="consent" required> I am authorised to list this office and agree that the details above can be shown publicly in the directory.</label>
+        <p class="error-text field-wide" id="listing-error" role="alert" hidden></p>
+        <div class="field-wide"><button type="submit" class="btn btn-primary">Send listing request</button></div>
+      </form>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="app-bottom-nav"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/offices.js"></script>
+</body>
+</html>

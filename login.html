@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Staff login | ALMA</title>
+  <meta name="description" content="Staff and engineer login.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional font CDN (Google Fonts). Remove these 3 lines to use system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="login" data-tab="profile" data-nav="public">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" class="page container" tabindex="-1">
+
+    <div class="login-wrap">
+      <section class="card login-card" aria-labelledby="login-title">
+        <h1 id="login-title">Staff login</h1>
+        <p class="muted" style="text-align:center">The dashboard and site reports are for ALMA engineers and staff.</p>
+
+        <div class="demo-box" role="note">
+          <strong>Demo login (placeholder).</strong> Credentials are checked in the browser against <code>js/data.js</code> and are not secure.
+          Replace with real authentication before going live.<br>
+          Try <code>loay</code> / <code>alma-demo</code> or <code>staff</code> / <code>alma-staff</code>.
+        </div>
+
+        <form id="login-form" class="form-grid" style="grid-template-columns:1fr" novalidate>
+          <div class="field"><label for="username">Username</label><input id="username" name="username" autocomplete="username" required></div>
+          <div class="field"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required></div>
+          <p class="error-text" id="login-error" role="alert" hidden></p>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+        </form>
+        <p class="muted small" style="text-align:center">Looking for a quotation? <a href="services.html" class="text-link">See our services</a></p>
+      </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="app-bottom-nav"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>

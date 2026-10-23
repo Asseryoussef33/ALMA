@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>ALMA | The soul of spaces</title>
+  <meta name="description" content="ALMA finishing engineering: interior design, execution and site supervision in Alexandria.">
+  <meta name="theme-color" content="#FFFFFF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Optional font CDN (Google Fonts). Remove these 3 lines to use system fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home" data-tab="home" data-nav="public">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" class="page container" tabindex="-1">
+
+    <form class="search-bar" action="projects.html" role="search">
+      <label for="home-search" class="sr-only">Search projects</label>
+      <span data-icon="search"></span>
+      <input id="home-search" name="q" type="search" placeholder="Search for designs, materials, styles..." autocomplete="off">
+    </form>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" id="hero-media"></div>
+      <div class="hero-content">
+        <p class="eyebrow" id="hero-eyebrow">Featured</p>
+        <h1 id="hero-title" class="display">Timeless Finishes for Modern Living</h1>
+        <p id="hero-sub">Natural materials. Lasting beauty.</p>
+        <a class="btn btn-light btn-pill" href="projects.html">Explore Projects <span data-icon="arrowRight"></span></a>
+      </div>
+    </section>
+
+    <section aria-labelledby="cat-title">
+      <div class="section-head">
+        <h2 id="cat-title">Explore by Category</h2>
+        <a class="see-all" href="projects.html">See all <span data-icon="arrowRight"></span></a>
+      </div>
+      <nav id="home-categories" class="chip-row" aria-label="Project categories"></nav>
+    </section>
+
+    <section aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title">Featured Projects</h2>
+        <a class="see-all" href="projects.html">See all <span data-icon="arrowRight"></span></a>
+      </div>
+      <div id="featured-list" class="card-list grid-2"></div>
+    </section>
+
+    <section aria-labelledby="services-title">
+      <div class="section-head">
+        <h2 id="services-title">Our Services</h2>
+        <a class="see-all" href="services.html">All services <span data-icon="arrowRight"></span></a>
+      </div>
+      <div id="services-preview" class="tile-grid"></div>
+    </section>
+
+    <section aria-labelledby="dir-title">
+      <div class="section-head"><h2 id="dir-title">Directories</h2></div>
+      <div class="tile-grid">
+        <a class="card tile" href="offices.html" style="text-decoration:none">
+          <span class="tile-icon"><span data-icon="building"></span></span>
+          <div><h3>Office Directory</h3><p id="office-count">Finishing and interior execution offices</p></div>
+          <span data-icon="chevronRight"></span>
+        </a>
+        <a class="card tile" href="engineers.html" style="text-decoration:none">
+          <span class="tile-icon"><span data-icon="users"></span></span>
+          <div><h3>Engineers</h3><p id="engineer-count">Our team and network</p></div>
+          <span data-icon="chevronRight"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div>
+        <h2 id="cta-title">Planning a finishing project?</h2>
+        <p class="muted">Tell us about your space and get a quotation, or book an engineer to visit the site.</p>
+      </div>
+      <div class="cta-actions">
+        <button type="button" class="btn btn-primary" data-quote="quote">Request a Quote</button>
+        <button type="button" class="btn btn-outline" data-quote="visit" data-service="site-visit"><span data-icon="calendar"></span>Book a Site Visit</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+  <div id="app-bottom-nav"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages/home.js"></script>
+</body>
+</html>
